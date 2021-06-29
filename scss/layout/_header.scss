@@ -1,0 +1,198 @@
+//NAVBAR
+
+//Top-header
+
+.top_header {
+  z-index: 10002;
+  position: absolute;
+  background-color: $transparent;
+  opacity: 1;
+  @include header($wth-6, $black-1, $f-2);
+  .top_header__container {
+    @include container($wth-5, $mg-14, 0 ,$pd-9);
+    background-color: inherit;
+    .nav {
+      @include navbar($wth-6, $dpl-1, $flx-d-1, $pos-1, $adj-6);
+      background-color: inherit;
+
+      .logo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: inherit;
+        img {
+          background-color: inherit;
+        }
+      }
+      .top__menu {
+        @include horizontalLayout($dpl-1, $flx-d-1, $adj-1);
+        padding-left: $pd-12;
+        background-color: inherit;
+        .nav__menu {
+          @include horizontalLayout($dpl-1, $flx-d-1, $adj-1);
+          background-color: inherit;
+          .nav__menu__item {
+            list-style-type: none;
+            z-index: 5;
+            padding-left: $pd-12;
+            margin: 0;
+            display: $dpl-2;
+            background-color: inherit;
+            a {
+              @include listStyle($fw-3, $l-ht-5, $black-1, $fs-3, $f-2);
+            }
+          }
+        }
+        .top__menu__info {
+          margin-left: $mg-11;
+          .top__menu__info__cell {
+            @include horizontalLayout($dpl-1, $flx-d-1, $adj-1);
+            justify-content: center;
+            height: $ht-4;
+            .top__menu__info__widget {
+              font-size: $fs-4;
+              display: $dpl-3;
+              line-height: $l-ht-1;
+              width: auto;
+              .filled__button {
+                box-shadow: 0 0 0 40.5px $pink inset;
+                color: $white-1;
+                display: $dpl-1;
+                flex-direction: $flx-d-1;
+                justify-content: $adj-1;
+                align-items: $adj-1;
+                align-content: $adj-7;
+                position: $pos-1;
+                overflow: hidden;
+                padding: $pd-4 $pd-6;
+                margin: $mg-2;
+                text-decoration: none;
+                font-weight: $fw-2;
+                font-size: $fs-4;
+                text-align: $adj-1;
+                font-family: $f-2;
+                background-color: $transparent;
+                transition: all 300ms ease;
+                border-radius: $bd-r-3;
+                border-style: none;
+                i {
+                  color: $white-1;
+                  background-color: $pink;
+                  font-weight: $fw-2;
+                  padding-right: $pd-1;
+                }
+              }
+            }
+            .topMenuInfoIcon {
+              @include socialIcon ($dpl-3, $fs-6, $mg-5)
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//Sticky-header
+
+.sticky__header {
+  z-index: 10002;
+  display: none;
+  transition: transform 200ms ease;
+  transform: translateY(0);
+  position: fixed;
+  box-shadow: 0 0 10px 0 $shadow;
+  background-color: $white-1;
+  @include header ($wth-6, $black-1, $f-2);
+  .sticky__header__container {
+    @include container ($wth-5, $mg-14, 0, $pd-9);
+    .top__menu {
+      @include navbar ($wth-6, $dpl-1, $flx-d-1, $pos-1, $adj-1);
+      // height: $ht-3;
+      .nav {
+        padding-left: $pd-12;
+        .nav__menu {
+          @include horizontalLayout($dpl-1, $flx-d-1, $adj-1);
+          .nav__menu__item {
+            list-style-type: none;
+            z-index: 5;
+            padding-left: $pd-12;
+            margin: 0;
+            display: $dpl-2;
+            line-height: $l-ht-5;
+            a {
+              @include listStyle($fw-3, $l-ht-5, $black-1, $fs-3, $f-2);
+            }
+          }
+        }
+      }
+      .top__menu__info {
+        margin-left: $mg-11;
+        .top__menu__info__cell {
+          @include horizontalLayout($dpl-1, $flx-d-1, $adj-1);
+          justify-content: center;
+          height: $ht-3;
+          .top__menu__info__widget {
+            font-size: $fs-4;
+            display: $dpl-3;
+            line-height: $l-ht-1;
+            width: auto;
+            .filled__button {
+              box-shadow: 0 0 0 40.5px $pink inset;
+              color: $white-1;
+              display: $dpl-1;
+              flex-direction: $flx-d-1;
+              justify-content: $adj-1;
+              align-items: $adj-1;
+              align-content: $adj-7;
+              position: $pos-1;
+              overflow: hidden;
+              padding: $pd-3 $pd-6;
+              margin: $mg-2;
+              text-decoration: none;
+              font-weight: $fw-2;
+              font-size: $fs-4;
+              text-align: $adj-1;
+              font-family: $f-2;
+              background-color: $transparent;
+              transition: all 300ms ease;
+              border-radius: $bd-r-3;
+              border-style: none;
+              i {
+                color: $white-1;
+                background-color: $pink;
+                font-weight: $fw-2;
+                padding-right: $pd-1;
+              }
+            }
+          }
+          .topMenuInfoIcon {
+            @include socialIcon ($dpl-3, $fs-6, $mg-5)
+          }
+        }
+      }
+    }
+  }
+}
+
+//Vertical Header
+
+.vertical__header {
+  display: none;
+  background-color: $white-1;
+  transition: transform 1s cubic-bezier(.230,1,.320,1);
+  transform: translateX(0);
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  text-align: $adj-1;
+  height: $ht-6;
+  top: 0;
+  bottom: 0;
+  position: fixed;
+  width: $wth-11;
+  clear: both;
+  z-index: 101;
+  padding:0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  left: 0;
+}

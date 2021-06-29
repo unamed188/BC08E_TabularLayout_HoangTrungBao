@@ -1,0 +1,64 @@
+//-----------CAROUSEL--------------//
+
+.carousel {
+    position: $pos-1;
+    display: $dpl-2;
+    background-color: transparent;
+    .carousel__container {
+        background-color: inherit;
+        z-index: 3;
+        position: $pos-1;
+        @include container ($wth-5, $mg-14, $pd-13, 0);
+        .content {
+            @include horizontalLayout ($dpl-1, $flx-d-1, $adj-1);
+            justify-content: $adj-9;
+            width: $wth-6;
+            background-color: inherit;
+            .content__item {
+                text-align: $adj-4;
+                width: $wth-7;
+                background-color: inherit;
+                .content__item__title {
+                    @include verticalLayout ($dpl-1, $flx-d-2, $mg-12, 0, 0, 0);
+                    background-color: inherit;
+                    .item__title__heading {
+                        @include heading ($fs-9, $pink, $fw-3, $mg-4, $f-2);
+                        background-color: inherit;
+                    }
+                    h1 {
+                        @include heading ($fs-12, $black-2, $fw-4, 0, $f-2);
+                        background-color: inherit
+                    }
+                }
+            }
+            .content__item__img {
+                background-color: inherit;
+                img {
+                    background-color: inherit;
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+    .top__cover__img {
+        position: $pos-2;
+        top: 0;
+        right: 0;
+        left: 0;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    .bottom__cover__img {
+        position: $pos-2;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}

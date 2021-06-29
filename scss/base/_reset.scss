@@ -1,0 +1,20 @@
+//RESET
+* {
+    color: $black-1;
+    font-family: $f-1;
+    margin: 0;
+    padding: 0;
+    box-sizing: border_box;
+    letter-spacing: 0.5px;
+  }
+  
+  html {
+    font-size: $fs-7;
+    min-height: 100vh;
+  }
+  
+  body {
+    font-weight: $fw-1;
+    line-height: $l-ht-6;
+    background-size: cover;
+  }

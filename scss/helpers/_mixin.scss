@@ -1,0 +1,62 @@
+@mixin header($wth, $color, $f) {
+  width: $wth;
+  color: $color;
+  font-family: $f;
+}
+
+@mixin container($wth, $mg, $pd-y, $pd-x) {
+  max-width: $wth;
+  margin: $mg;
+  padding: $pd-y $pd-x;
+}
+
+@mixin navbar($wth, $dpl, $flx-d, $pos, $adj, $adj) {
+  width: $wth;
+  display: $dpl;
+  flex-direction: $flx-d;
+  flex-wrap: wrap;
+  position: $pos;
+  justify-content: $adj;
+  align-items: $adj;
+}
+
+@mixin listStyle($fw, $l-ht, $color, $fs, $f) {
+  font-weight: $fw;
+  line-height: $l-ht;
+  color: $color;
+  font-size: $fs;
+  font-family: $f;
+  text-decoration: none;
+}
+
+@mixin verticalLayout ($dpl, $flx-d, $mg-y, $mg-x, $pd-y, $pd-x) {
+  display: $dpl;
+  flex-direction: $flx-d;
+  margin: $mg-y $mg-x;
+  padding: $pd-y $pd-x;
+}
+
+@mixin horizontalLayout($dpl, $flx-d, $adj) {
+  display: $dpl;
+  flex-direction: $flx-d;
+  margin: 0;
+  flex-wrap: wrap;
+  align-items: $adj;
+}
+
+@mixin socialIcon ($dpl, $fs, $mg) {
+  display: $dpl;
+  font-size: $fs;
+  margin-left: $mg;
+}
+
+@mixin heading ($fs, $color, $fw, $mg, $f) {
+  font-size: $fs;
+  color: $color;
+  font-weight: $fw;
+  margin-bottom: $mg;
+  font-family: $f;
+}
+
+
+

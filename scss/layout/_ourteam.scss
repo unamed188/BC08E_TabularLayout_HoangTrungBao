@@ -1,0 +1,101 @@
+//------------------OUR-TEAM-------------//
+
+.our__team {
+  background-color: $white-2;
+  position: $pos-1;
+  .our__team__container {
+    z-index: 3;
+    position: $pos-1;
+    padding-top: $pd-9;
+    max-width: $wth-5;
+    margin: $mg-14;
+    display: $dpl-1;
+    flex-direction: $flx-d-1;
+    align-items: $adj-7;
+    justify-content: $adj-1;
+    position: $pos-1;
+    display: $dpl-2;
+    background-color: transparent;
+    .our__team__row {
+      max-width: $wth-6;
+      display: $dpl-1;
+      flex-direction: $flx-d-1;
+      flex-wrap: wrap;
+      justify-content: $adj-9;
+      align-content: $adj-7;
+      background-color: inherit;
+      .our__team__cell {
+        max-width: 25%;
+        padding: 0 $pd-7;
+        display: $dpl-1;
+        flex-direction: $flx-d-2;
+        background-color: inherit;
+        .cell__container {
+          background-color: $white-1;
+          padding: 0 $pd-9;
+          border-radius: $bd-r-1;
+          overflow: hidden;
+          transition: all 300ms ease-in-out;
+          width: $wth-6;
+
+          .cell__container__img {
+            margin: 0 $mg-15;
+            img {
+              transform: scale3d(1, 1, 1);
+              transition: transform 650ms ease-in-out, filter ease-in-out;
+              display: $dpl-2;
+              margin: 0;
+              line-height: 0;
+              height: auto;
+              max-width: $wth-6;
+            }
+          }
+          .cell__container__content {
+            padding-top: $pd-6;
+            padding-bottom: $pd-10;
+            .content__header {
+              text-align: $adj-1;
+              color: $black-1;
+              margin: 0;
+              padding: 0;
+              height: auto;
+              span {
+                @include heading($fs-8, $pink, $fw-3, $mg-3, $f-2);
+                z-index: 1;
+                display: $dpl-2;
+                position: $pos-1;
+                line-height: $l-ht-1;
+              }
+              h4 {
+                @include heading($fs-10, $black-2, $fw-4, 0, $f-2);
+                line-height: $l-ht-8;
+              }
+            }
+            .content__info {
+              margin-top: $mg-16;
+              text-align: $adj-1;
+              p {
+                margin: 0;
+                line-height: $l-ht-8;
+              }
+            }
+          }
+        }
+      }
+    }
+    .spacing__row {
+      margin-bottom: $mg-9;
+    }
+  }
+  .bottom__cover__img {
+    position: $pos-2;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: transparent;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
